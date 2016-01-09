@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link href="../css/home.css" rel="stylesheet">
+
+    <link href="../css/sign.css" rel="stylesheet">
+    <link href="../css/login.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="navicontainer">
+      <div class="navibar">
+      <a href="#" class="navitheme">Home</a>
+      <a href="" id="decision" class="navitheme" onclick="goMain();return false">Decision</a>
+      <ul>
+        <li><a href="" id="sign" onclick="showSignUp();return false">SignUp</a></li>
+        <li><a href="" id="login" onclick="showLoginIn();return false">LoginIn</a></li>
+        <li><a href="" id="loginOut" onclick="logOut();return false">LoginOut</a></li>
+      </ul>
+      </div>
+    </div>
+
+    <div class="firstcontent">
+      <p class="slogan">No More Hesitation</p>
+      <p class="slogan">Join Us</p>
+    </div>
+
+    <div class="secondcontent">
+      <h1>What is Decision?</h1>
+
+      <!--轮播图-->
+      <div class="slide-viewer">
+        <div class="slide">Record Decision</div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+      <ul>
+        <li class="slide-li">1</li>
+        <li class="slide-li">2</li>
+        <li class="slide-li">3</li>
+      </ul>
+      <ul class="arrow">
+      <li id="slide-button-left"> < </li>
+      <li id="slide-button-right"> > </li>
+      </ul>
+      </div>
+    </div>
+
+    <div class="thirdcontent">
+      <h1>Why?</h1>
+      <div class="allcol">
+      <div class="col">
+        <p>You can just record any idea at any time anywhere,never worry about forgetting it.</p>
+      </div>
+      <div class="col">
+        <p>For each idea,you can list advantages and disadvantages,just help you to judge your decision.</p>
+      </div>
+      <div class="col">
+        <p>Of course,the final result is all depended by yourself!</p>
+      </div>
+      </div>
+    </div>
+
+    <div class="fourthcontent">
+        <h1>Have a Try?</h1>
+        <div class="alert alert1">
+          <strong>step1</strong>
+          <p>Use your email to sign up or login in,then you will see the main page to use decision.</p>
+        </div>
+        <div class="alert alert2">
+          <strong>step2</strong>
+          <p>Mark down your decision and list advantages and disadvantages,then it will show you the result. </p>
+        </div>
+        <div class="alert alert3">
+            <strong>step3</strong>
+            <p>You can make decision according to our result and chose weather to record this decision and it`s advantages and disadvantages </p>
+        </div>
+    </div>
+
+    <div id="signUp">
+      <form>
+        <h2>Please sign up</h2>
+        <img src="../img/close.jpg" class="clo-sl" onclick="hiddenDiv('signUp')">
+        <input type="email" id="emailID" class="formControl-sl" placeholder="Email address" required autofocus>
+        <input type="password" id="passwordID" class="formControl-sl" placeholder="Password" required>
+        <div id="note">This is note</div>
+        <button type="button" class="btn-sl" onclick="return signUp(emailID.value,passwordID.value)">Sign up</button>
+      </form>
+    </div>
+
+    <div id="loginIn">
+        <form>
+            <h2>Please login in</h2>
+            <img src="../img/close.jpg" class="clo-sl" onclick="hiddenDiv('loginIn')">
+            <input type="email" id="emailID2" class="formControl-sl"  placeholder="Email address" required autofocus>
+            <input type="password" id="passwordID2" class="formControl-sl"  placeholder="Password" required>
+            <div class="checkbox"><input type="checkbox"  id = "checkid" class="checkbox-sl" value="yes" onclick="changeCheckBox(checkid)">Remember me</div>
+            <div id="note2">This is note2</div>
+            <button type="button" class="btn-sl" onclick="loginIn(emailID2.value,passwordID2.value,checkid.value)">Login in</button>
+        </form>
+    </div>
+
+
+  <script src="../js/jquery.js"></script>
+  <script src="../js/home.js"></script>
+  <script src="../js/sign.js"></script>
+  <script src="../js/navbar.js"></script>
+  </body>
+</html>

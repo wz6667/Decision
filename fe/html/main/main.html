@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Main</title>
+  <link href="../css/home.css" rel="stylesheet">
+  <link href="../css/main.css" rel="stylesheet">
+  <link href="../css/sign.css" rel="stylesheet">
+  <link href="../css/login.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="navicontainer">
+    <div class="navibar">
+      <a href="" class="navitheme" onclick="goHome();return false">Home</a>
+      <a href="#" class="navitheme">Decision</a>
+      <a href="" id="history" class="navitheme" onclick="goHistory();return false">History</a>
+      <ul>
+          <li><a href="" id="sign" onclick="showSignUp();return false">SignUp</a></li>
+          <li><a href="" id="login" onclick="showLoginIn();return false">LoginIn</a></li>
+          <li><a href="" id="loginOut" onclick="logOut();return false">LoginOut</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <h1 class="main-h1" >Create a decision</h1>
+  <div class="main-1 head-underline">
+    <input type="text" id="decisionName" placeholder="Input your decision" autofocus>
+  </div>
+
+  <h1 class="main-h1">Judge it</h1>
+  <div class="main-2">
+      <div class="col">
+      <h2>Advantages</h2>
+      <ol id="adol">
+          <li><textarea></textarea></li>
+      </ol>
+      <a href="" id="newad" title="add a new advantage" onclick="addli('adol');return false">+New advantage</a>
+      </div>
+      <div class="col">
+        <h2>Disadvantages</h2>
+        <ol id="disol">
+        <li><textarea></textarea></li>
+        </ol>
+        <a href="" title="add a new disadvantage" id="newdis" onclick="addli('disol');return false">+New disadvantage</a>
+      </div>
+  </div>
+
+  <div class="divhidden">hide</div>
+  <div class="head-underline"></div>
+
+  <h1 class="main-h1" >Make Decision</h1>
+  <div class="main-3">
+    <input type="text" id="final" placeholder="input your final decision">
+    <button id="buttonid" type="button" onclick="sendContent()">Record your input</button>
+  </div>
+
+
+  <div id="signUp">
+      <form>
+          <h2>Please sign up</h2>
+          <img src="../img/close.jpg" class="clo-sl" onclick="hiddenDiv('signUp')">
+          <input type="email" id="emailID" class="formControl-sl" placeholder="Email address" required autofocus>
+          <input type="password" id="passwordID" class="formControl-sl" placeholder="Password" required>
+          <div id="note">This is note</div>
+          <button type="button" class="btn-sl" onclick="return signUp(emailID.value,passwordID.value)">Sign up</button>
+      </form>
+  </div>
+
+  <div id="loginIn">
+      <form>
+          <h2>Please login in</h2>
+          <img src="../img/close.jpg" class="clo-sl" onclick="hiddenDiv('loginIn')">
+          <input type="email" id="emailID2" class="formControl-sl"  placeholder="Email address" required autofocus>
+          <input type="password" id="passwordID2" class="formControl-sl"  placeholder="Password" required>
+          <div class="checkbox"><input type="checkbox"  id = "checkid" class="checkbox-sl" value="yes" onclick="changeCheckBox(checkid)">Remember me</div>
+          <div id="note2">This is note2</div>
+          <button type="button" class="btn-sl" onclick="loginIn(emailID2.value,passwordID2.value,checkid.value)">Login in</button>
+      </form>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/jquery.js"></script>
+  <script src="../js/sign.js"></script>
+  <script src="../js/navbar.js"></script>
+</body>
+</html>
